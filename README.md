@@ -1,7 +1,9 @@
 # ClickOutside
 
 Vue 3 click outside directive.
+
 Forked from https://github.com/vue-bulma/click-outside
+
 Based on vite vue ts template
 
 ## Installation
