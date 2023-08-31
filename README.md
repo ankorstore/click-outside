@@ -1,27 +1,33 @@
 # ClickOutside
 
-Vue click outside directive.
+Vue 3 click outside directive.
+Forked from https://github.com/vue-bulma/click-outside
+Based on vite vue ts template
 
 ## Installation
 
 ```
-$ npm install vue-click-outside
+$ npm install @ankorstore/vue-click-outside
 ```
 
-## Example
+## Example usage
 
 ```vue
 <template>
-  <div>
+  <div ref="popupItem">
     <div v-click-outside="hide" @click="toggle">Toggle</div>
     <div v-show="opened">Popup item</div>
   </div>
 </template>
 
 <script>
-import ClickOutside from 'vue-click-outside'
+import { ClickOutside } from 'vue-click-outside'
 
 export default {
+  // do not forget this section
+  directives: {
+    ClickOutside
+  },
   data () {
     return {
       opened: false
@@ -37,16 +43,6 @@ export default {
       this.opened = false
     }
   },
-
-  mounted () {
-    // prevent click outside event with popupItem.
-    this.popupItem = this.$el
-  },
-
-  // do not forget this section
-  directives: {
-    ClickOutside
-  }
 }
 </script>
 ```
@@ -58,6 +54,22 @@ export default {
 
 ---
 
-> [fundon.me](https://fundon.me) &nbsp;&middot;&nbsp;
-> GitHub [@fundon](https://github.com/fundon) &nbsp;&middot;&nbsp;
-> Twitter [@_fundon](https://twitter.com/_fundon)
+# Contributing
+
+Thanks for being interested in contributing to this project!
+
+## Setup
+
+Clone this repo to your local machine and install the dependencies.
+
+```
+npm install
+```
+
+Start local dev enviroment 
+
+```
+npm run dev
+```
+
+

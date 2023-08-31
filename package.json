@@ -1,10 +1,33 @@
 {
   "name": "vue-click-outside",
-  "version": "1.1.0",
-  "description": "ClickOutside directive for Vue",
-  "main": "index.js",
-  "repository": "vue-bulma/click-outside",
-  "author": "Fangdun Cai <cfddream@gmail.com>",
-  "maintainers": "Luventa <luventa@outlook.com>",
-  "license": "MIT"
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5",
+    "vite-plugin-dts": "^3.5.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/click-outside.umd.cjs",
+  "module": "./dist/click-outside.js",
+  "types": "./dist/click-outside.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/click-outside.js",
+      "require": "./dist/click-outside.umd.cjs"
+    }
+  }
 }
