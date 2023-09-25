@@ -1,5 +1,5 @@
 {
-  "name": "vue-click-outside",
+  "name": "@ankorstore/vue-click-outside",
   "version": "2.0.1",
   "type": "module",
   "scripts": {
